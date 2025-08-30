@@ -135,15 +135,11 @@ file saved to C:\Users\hp\Downloads\sales_stored_data.csv
 
 ## 📊 Visualizations
 
-![Sales by Region](Images/Sales_by_Region.png)
-
-![Sales Trend Over Time](Images/Sale_Trend_Over_Time.png)
-
-![Most Sold Product](Images/MOST_SOLD_PRODUCT.png)
-
-![Data for Sales & Salesperson (Bar)](Images/DATA_FOR_SALES_AND_SALESPERSON_BAR.png)
-
-![Data for Sales & Salesperson (Pie)](Images/DATA_FOR_SALES_AND_SALESPERSON_PIE.png)
+![Sales by Region](./Images/Sales_by_Region.png)
+![Sales Trend Over Time](./Images/Sale_Trend_Over_Time.png)
+![Most Sold Product](./Images/MOST_SOLD_PRODUCT.png)
+![Sales & Salesperson (Bar)](./Images/DATA_FOR_SALES_AND_SALESPERSON_BAR.png)
+![Sales & Salesperson (Pie)](./Images/DATA_FOR_SALES_AND_SALESPERSON_PIE.png)
 
 ---
 
