@@ -135,20 +135,11 @@ file saved to C:\Users\hp\Downloads\sales_stored_data.csv
 
 ## 📊 Visualizations
 
-### Sales by Region
-![Sales by Region](./Images/Sales_by_Region.png)
-
-### Sales Trend Over Time
-![Sales Trend](./Images/Sale_Trend_Over_Time.png)
-
-### Most Sold Product
-![Most Sold Product](./Images/MOST_SOLD_PRODUCT.png)
-
-### Sales & Salesperson (Bar)
-![Sales & Salesperson Bar](./Images/DATA_FOR_SALES_AND_SALESPERSON_BAR.png)
-
-### Sales & Salesperson (Pie)
-![Sales & Salesperson Pie](./Images/DATA_FOR_SALES_AND_SALESPERSON_PIE.png)
+![Sales by Region](Pandas_Matplotlib_projects/SALES_DATA/Images/Sales_by_Region.png)
+![Sales Trend](Pandas_Matplotlib_projects/SALES_DATA/Images/Sale_Trend_Over_Time.png)
+![Most Sold Product](Pandas_Matplotlib_projects/SALES_DATA/Images/MOST_SOLD_PRODUCT.png)
+![Sales & Salesperson Bar](Pandas_Matplotlib_projects/SALES_DATA/Images/DATA_FOR_SALES_AND_SALESPERSON_BAR.png)
+![Sales & Salesperson Pie](Pandas_Matplotlib_projects/SALES_DATA/Images/DATA_FOR_SALES_AND_SALESPERSON_PIE.png)
 
 ---
 
