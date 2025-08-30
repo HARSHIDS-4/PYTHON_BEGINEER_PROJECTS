@@ -29,6 +29,7 @@ python-mini-projects/
 │
 ├── Pandas_Matplotlib_projects/
 │ ├── e_commerce.py
+  ├── Images
 │ ├── movies.py
 │ ├── sales_data.py
 │ └── student_marks_analysis.py
@@ -77,13 +78,13 @@ python-mini-projects/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/python-mini-projects.git
-   cd python-mini-projects
+   git clone https://github.com/HARSHIDS-4/PYTHON_BEGINEER_PROJECTS.git
+   cd PYTHON_BEGINEER_PROJECTS
    ```
 
 2. Run any project::
     ```bash
-    python filename.py
+    python PYTHON_BEGINEER_PROJECTS.py
     ``` 
 ---
 

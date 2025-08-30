@@ -78,6 +78,8 @@ class SALES:
         plt.ylabel("Total Sales")
         plt.title('Sales Trend Over Time')
         plt.grid(linestyle=":",color='Grey')
+        
+        plt.savefig("C:\\Users\\hp\\Downloads\\Sale_Trend_Over_Time.png",dpi=500,bbox_inches='tight')
         plt.show()
 
 #Sales by Region 
@@ -86,6 +88,8 @@ class SALES:
         plt.xlabel("region")
         plt.ylabel("Sales")
         plt.legend()
+
+        plt.savefig("C:\\Users\\hp\\Downloads\\Sales_by_Region.png",dpi=500,bbox_inches='tight')
         plt.show()
 
 #METHOD 1
@@ -97,6 +101,8 @@ class SALES:
         ax[1].set_title("Top 5 Salespersons")
         fig.suptitle("DATA FOR SALES AND SALESPERSON")
         plt.tight_layout()
+
+        plt.savefig("C:\\Users\\hp\\Downloads\\DATA_FOR_SALES_AND_SALESPERSON_BAR.png",dpi=500,bbox_inches='tight')
         plt.show()
 
 #METHOD 2
@@ -104,10 +110,12 @@ class SALES:
         ax[0].pie(bar_region,labels=bar_region.index,autopct="%1.1f%%",shadow=True)
         ax[0].set_title("sales by region")
 
-        ax[1].pie(bar_salesperson,labels=bar_salesperson.index,autopct="%1.1f%%")
+        ax[1].pie(bar_salesperson,lab0els=bar_salesperson.index,autopct="%1.1f%%")
         ax[1].set_title("top 5 salesperson")
         fig.suptitle("DATA FOR SALES AND SALESPERSON")
         plt.tight_layout()
+
+        plt.savefig("C:\\Users\\hp\\Downloads\\DATA_FOR_SALES_AND_SALESPERSON_PIE.png",dpi=500,bbox_inches='tight')
         plt.show()
 
 #Most Sold Product 
@@ -115,8 +123,10 @@ class SALES:
         product.plot(kind="bar")
         plt.xlabel("product")
         plt.ylabel("Sales amount")
+
+        plt.savefig("C:\\Users\\hp\\Downloads\\MOST_SOLD_PRODUCT.png",dpi=500,bbox_inches='tight')
         plt.show()
-    
+
     
 sales=SALES()
 print("FIRST 10 ROWS ARE:")
