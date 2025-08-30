@@ -136,7 +136,7 @@ file saved to C:\Users\hp\Downloads\sales_stored_data.csv
 ## 📊 Visualizations
 
 ### Sales by Region
-![Sales by Region](Pandas_Matplotlib_projects/Images/DATA_FOR_SALES_AND_SALESPERSON_BAR.png.png)
+![Sales by Region](Pandas_Matplotlib_projects/Images/Sales_by_Region.png.png)
 
 ### Data for sales and salesperson pie
 ![Data for sales and salesperson pie](Images/DATA_FOR_SALES_AND_SALESPERSON_PIE.png)
