@@ -77,7 +77,7 @@ class RELEASE_TRENDS(MOVIES):
     
     def movies_per_country(self):
         country=self.file['Country'].dropna()
-        plt.bar(country.values, country.index,color='orange',edgecolor='red')
+        plt.bar(country.index, country.values,color='orange',edgecolor='red')
         plt.xlabel("Country")
         plt.ylabel("The number of movies")
         plt.title("The number of Movies per country")
