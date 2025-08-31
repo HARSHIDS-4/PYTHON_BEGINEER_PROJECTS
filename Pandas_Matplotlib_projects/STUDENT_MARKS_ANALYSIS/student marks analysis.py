@@ -23,7 +23,13 @@ class STUDENTS:
     
     def average_marks(self):
         self.path['Total Marks']=self.subjects.sum(axis=1)
-        self.path['Average Marks']=self.path['Total Marks']/5
+        self.path['Average Marks']=self.path['Total Marks']/len(self.subjects)
+
+        grade=self.path['Average Marks'].apply(lambda x:"A" if x>=80 else("B" if x>=60 and x<80 else("C" if x>=40 and x<60 else "FAIL")))
+        grade_count=grade.value_counts()
+        plt.pie(grade_count,labels=grade_count.index,autopct="%1.1f%%")
+        plt.title("grade percentage of students")
+        plt.show()
         return self.path[['Student','Average Marks']]
     
     
@@ -47,11 +53,10 @@ class STUDENTS:
         return average
     
     def hardest_subject(self):
-        total=self.subjects.sum() 
-        average=total/10 
-        hardest=average.idxmin()
-        hardest_subject = self.subjects.loc[hardest].idxmin()
-        return hardest_subject
+        total=self.subjects.sum()
+        hardest_subject=total.idxmax()
+        hardest_subject_marks=total.max()
+        return hardest_subject,hardest_subject_marks
     
     def failure_percentage(self,final_result):
         check=final_result['Subject Status']
@@ -60,17 +65,22 @@ class STUDENTS:
         return fail_percentage
     
     def bar_chart(self,average):
+       self.subjects=self.subjects.fillna(0)
        fig,ax=plt.subplots(1,2,figsize=(10,5))
-       """ax[0].bar(self.subjects,average,color='aqua')
+       subjects=['Mathematics','Science','English','History','Computer']
+       ax[0].bar(subjects,average,color='aqua')
        ax[0].set_title('Subject average marks')
-       self.path['Grade']=average.apply(lambda x:"A" if x>=80 else("B" if x>=60 and x<80 else("C" if x>=40 and x<60 else "FAIL")))
-       ax[1].pie(self.path['Grade'],labels=self.subjects,autopct="%1.1f%%")
+
+       Grade=average.apply(lambda x:"A" if x>=80 else("B" if x>=60 and x<80 else("C" if x>=40 and x<60 else "FAIL")))
+
+       label=[f"{sub}:{gra}" for sub,gra in zip(subjects,Grade)]
+       total=self.subjects.sum()
+       ax[1].pie(total,labels=label,autopct="%1.1f%%")
        ax[1].set_title('Grades per subject')
        fig.suptitle("grades and average per subject is:")
-       #plt.show()"""
+       plt.show()
        print(type(self.subjects), self.subjects)
        print(type(average), average)
-       print(average.apply(type))
 
 
 students=STUDENTS()
@@ -102,10 +112,11 @@ print("Average marks of each subject are:")
 average=students.sub_avg()
 print(average)
 print()
-print("bar graph for subject average printed")
-print(students.bar_chart(average))
-print("hardest subject is:")
+print("hardest subject and its total marks is:")
 print(students.hardest_subject())
 print()
 print("percentage of failure in each subject is:")
 print(students.failure_percentage(final_result))
+print()
+print("bar graph for subject average printed")
+print(students.bar_chart(average))
