@@ -53,9 +53,12 @@ class SALES:
     
 #method 2
     def mean_std(self):
+        self.file['Total Sale Amount']=self.file['Total Sale Amount'].fillna(self.file['Total Sale Amount'].median())
         mean=self.file['Total Sale Amount'].mean()
         std=self.file['Total Sale Amount'].std()
         self.file['outliers']=self.file['Total Sale Amount'].apply(lambda x:"greater" if x>(mean+3*std) else "lesser")
+        plt.boxplot(self.file['Total Sale Amount'])
+        plt.show()
         return self.file[['Total Sale Amount','outliers']]
     
     def export_csv(self,path='C:\\Users\\hp\\Downloads\\sales_stored_data.csv'):
@@ -110,7 +113,7 @@ class SALES:
         ax[0].pie(bar_region,labels=bar_region.index,autopct="%1.1f%%",shadow=True)
         ax[0].set_title("sales by region")
 
-        ax[1].pie(bar_salesperson,lab0els=bar_salesperson.index,autopct="%1.1f%%")
+        ax[1].pie(bar_salesperson,labels=bar_salesperson.index,autopct="%1.1f%%")
         ax[1].set_title("top 5 salesperson")
         fig.suptitle("DATA FOR SALES AND SALESPERSON")
         plt.tight_layout()
