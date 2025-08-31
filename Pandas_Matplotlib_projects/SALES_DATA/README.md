@@ -34,6 +34,8 @@ It performs **data cleaning, statistical analysis, and visualization** on sales 
 - pandas  
 - matplotlib  
 
+---
+
 ## Install dependencies:
 ```bash
 pip install pandas matplotlib
@@ -132,6 +134,8 @@ mean and standard deviation of sales product are:
 
 file saved to C:\Users\hp\Downloads\sales_stored_data.csv
 ```
+
+---
 
 ## 📊 Visualizations
 
